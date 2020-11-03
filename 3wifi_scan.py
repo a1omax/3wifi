@@ -85,14 +85,14 @@ def check(API):
    global data1
    counter3=0
    
-   lastlines=('</NetworkList>\n<PasspointConfigData>\n<long name="ProviderIndex" value="0" />\n</PasspointConfigData>\n</WifiConf!igStoreData>')
+   lastlines=('</NetworkList>\n<PasspointConfigData>\n<long name="ProviderIndex" value="0" />\n</PasspointConfigData>\n</WifiConfigStoreData>')
 
-   with open(PATH,"a") as wifi:
+   with open(PATH,"r") as wifi:
       lines=wifi.readlines()
 
    
    with open(PATH,"w") as wifi:
-      wifi.writelines(lines)
+      wifi.writelines(lines[:-118])
    
    a=0
    b=99
